@@ -1,0 +1,6 @@
+10, Books of life, 14$ + 0.0$ (0%)
+20, Imported water, 100$ + 5.0$ (5%)
+5, Oppo Neo 5, 14$ + 1.4$ (10%)
+300, Imported Lumia, 7$ + 1.05$ (15%)
+Sum of tax: 422.0$
+Sum of price: 4732.0$
