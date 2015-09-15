@@ -7,13 +7,10 @@ module HumanClassification
 	# output: classified array
 	def gender_classification(array, condition)
 		condition.downcase!
-		if condition.eql?"m" or condition.eql?"male"
-			result = array.select {|item| item.gender.eql?"Male"}
-		elsif condition.eql?"f" or condition.eql?"female"
-			result = array.select {|item| item.gender.eql?"Female"}
-		else
-			result = array.select {|item| item.gender.eql?"(Unknown)"}
-		end
+		result = lambda {
+			(["m", "male"].include?condition)? (return "Male"):condition
+			(["f", "female"].include?condition)? ("Female"):("(Unknown)") }.call
+		array.select! {|item| item.gender.eql?result}
 	end
 	# classify age
 	# input: array and age
